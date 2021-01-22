@@ -149,6 +149,7 @@ sup {
  */
 img {
   border-style: none;
+  display: block;
 }
 
 /* Forms
@@ -413,6 +414,8 @@ body.modal-open {
 
 .container {
   width: 1920px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .nav-list {
@@ -578,7 +581,7 @@ body.modal-open {
   color: #ffffff;
   margin-top: 80px;
 }
-.collection {
+.new-collection {
   display: flex;
 }
 
@@ -651,5 +654,173 @@ body.modal-open {
   margin-top: 10px;
   text-align: left;
   color: #d0d0d0;
-  /* padding-bottom: 93px; */
+}
+
+.new-collection-wrapper {
+  background-image: url(../image/new-collection.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 880px;
+
+  text-align: center;
+}
+
+.new-collection-title {
+  font-family: "Playfair Display", serif;
+  font-size: 36px;
+  line-height: 1.33;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-left: 252px;
+  padding-right: 252px;
+
+  margin-top: 484px;
+  color: #ffffff;
+}
+
+.new-collection-title::after {
+  content: "";
+  width: 120px;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  margin-top: 30px;
+  height: 1px;
+  background: #ffffff;
+}
+
+.new-collection-btn {
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  padding: 12px 28px;
+  margin-top: 30px;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  letter-spacing: 0.1em;
+  line-height: 1.28;
+  background-color: transparent;
+  cursor: pointer;
+  line-height: 1.3;
+}
+.old-collection {
+  display: flex;
+}
+
+.image-wrapper {
+  position: relative;
+  background-image: url(../image/man.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 880px;
+  height: 600px;
+}
+
+.image-wrapper::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(
+    rgba(15, 15, 15, 0.5),
+    rgba(15, 15, 15, 0.5)
+  );
+}
+
+.old-collection-wrapper {
+  width: 1040px;
+  background-color: #000000;
+  text-align: center;
+}
+
+.old-collection-title {
+  font-family: "Playfair Display", serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1.33;
+  text-transform: uppercase;
+
+  padding-top: 100px;
+  color: #ffffff;
+}
+
+.old-collection-title::after {
+  content: "";
+  width: 120px;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  margin-top: 40px;
+  height: 1px;
+  background: #ffffff;
+}
+
+.old-collection-description {
+  font-family: "PT Sans", sans-serif;
+  font-size: 14px;
+  margin-top: 40px;
+  color: #ffffff;
+  line-height: 1.5;
+  margin-left: 285px;
+  margin-right: 284px;
+}
+
+.old-collection-btn {
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  padding: 12px 28px;
+  margin-top: 61px;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  letter-spacing: 0.1em;
+  line-height: 1.28;
+  background-color: transparent;
+  cursor: pointer;
+  line-height: 1.3;
+}
+
+.new-arrivals {
+  background-color: #000000;
+  text-align: center;
+  padding-bottom: 150px;
+}
+
+.arrivals-title {
+  padding-top: 120px;
+}
+
+.arrivals-title::after {
+  content: "";
+  width: 120px;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  margin-top: 40px;
+  height: 1px;
+  background: #ffffff;
+}
+
+.new-arrivals-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 81px;
+  margin-left: 405px;
+  margin-right: 406px;
+}
+
+.new-arrivals-list li {
+  margin-right: 23px;
+}
+
+.new-arrivals-list li:nth-child(4n) {
+  margin-right: 0px;
+}
+
+.new-arrivals-list li:nth-child(-n + 4) {
+  margin-bottom: 40px;
 }

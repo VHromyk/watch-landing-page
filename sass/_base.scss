@@ -1,0 +1,41 @@
+@font-face {
+  font-family: "PostBold";
+  src: url("../fonts/PostNoBillsJaffna-Bold.ttf");
+}
+
+$secondary-text-color: #969696;
+$font-title: "Playfair Display", serif;
+
+body {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: "PT Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.title {
+  font-family: $font-title;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.33;
+  text-transform: uppercase;
+
+  &::after {
+    content: "";
+    width: 120px;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    height: 1px;
+    background: #ffffff;
+  }
+}

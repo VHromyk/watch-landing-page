@@ -9,8 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/main.min.css">
     
 </head>
 <body>
@@ -19,17 +18,17 @@
             <div class="nav-list container-box">
                 <div class="nav-list-adress">
                     <svg class="icon-phone">
-                        <use href="./image/symbol-defs.svg#icon-phone"></use>
+                        <use href="./image/sprite.svg#icon-phone"></use>
                     </svg>
-                    <p class="nav-list-item">8 (812) 123-45-67 | Работаем 7 дней в неделю | 9:00 — 18:00</p>
+                    <p class="nav-list-item">8 (812) 123-45-67 <span class="nav-list-item-part">| Работаем 7 дней в неделю | 9:00 — 18:00</span></p>
                 </div>
                 <div class="nav-list-registration">
                     <svg class="icon-login">
-                        <use href="./image/symbol-defs.svg#icon-login"></use>
+                        <use href="./image/sprite.svg#icon-login"></use>
                     </svg>
-                    <button class="nav-btn">Войти</button>
+                    <button type="button" class="nav-btn">Войти</button>
                     <span class="line">/</span>
-                    <button class="nav-btn">Регистрация</button>
+                    <button type="button" class="nav-btn">Регистрация</button>
                 </div>
             </div>
         </div>
@@ -41,13 +40,30 @@
                     <li><a href="#" class="nav-opt-list-link">Личный кабинет</a></li>
                     <li><a href="#" class="nav-opt-list-link">Настройки</a></li>
                 </ul>
-                <svg class="icon-svg cart">
-        <use href="./image/symbol-defs.svg#icon-cart"></use>
-    </svg>
-    <svg class="icon-svg search">
-        <use href="./image/symbol-defs.svg#icon-search"></use>
-    </svg>
-</div>
+                <ul class="svg-icon-list">
+                    <li>
+                        <svg class="icon-svg cart">
+                        <use href="./image/sprite.svg#icon-cart"></use>
+                    </svg>
+                </li>
+                <li>
+                    <svg class="icon-svg search">
+                        <use href="./image/sprite.svg#icon-search"></use>
+                    </svg>
+                </li>
+            </ul>         
+        </div>
+        <button 
+        type="button" 
+        class="menu-button is-open">
+            <svg 
+            width="30" 
+            height="30px"
+            aria-label="Переключатель мобильного меню">
+                <use class="icon-menu" href="./image/sprite.svg#burger"></use>
+                <use class="icon-cross" href="./image/sprite.svg#cross"></use>
+            </svg>
+        </button>
         </div>
        
     </header>
@@ -96,7 +112,7 @@
                         </li>
                 </ul>
             </div>
-            <div class="new-collection-catalog-wrapper">
+            <div class="new-collection-catalog-wrapper container-box">
                 <h2 class="new-collection-catalog title">Новая коллекция</h2>
                 <button class="new-collection-catalog-btn">Каталог</button>
             </div>
@@ -106,7 +122,7 @@
             class="image-wrapper">
             </div>
             <div 
-            class="old-collection-wrapper">
+            class="old-collection-wrapper container-box">
                 <h2 class="old-collection-catalog title">
                     Коллекция 2018
                 </h2>
@@ -119,7 +135,7 @@
             </div>
         </section>
         <section class="new-arrivals container-box">
-            <h2 class=" arrivals-title title">
+            <h2 class="arrivals-title title">
                 Новые поступления
             </h2>
             <ul class="new-arrivals-list">
@@ -246,8 +262,11 @@
             <h3 class="footer-title">Рассылка</h3>
             <p class="mailing-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi semper viverra
                 nunc cursus tortor lectus nunc nulla nibh.</p>
-            <input type="text" placeholder="Ваша почта" class="mailing-input">
-            <button class="mailing-btn" type="button">Подписаться</button>
+                <div class="mailing-form">
+                    <input type="text" placeholder="Ваша почта" class="mailing-input">
+                    <button class="mailing-btn" type="button">Подписаться</button>
+                </div>
+            
         </div>
     </div>
 </div>
@@ -260,5 +279,6 @@
             </div>
         </div>
     </footer>
+    <script src='./js/index.js'></script>
 </body>
 </html>

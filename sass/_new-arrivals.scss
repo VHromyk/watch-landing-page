@@ -1,0 +1,52 @@
+/* Стили для секции new arrivals */
+
+.new-arrivals {
+  text-align: center;
+  padding-bottom: 150px;
+}
+
+.arrivals-title {
+  // padding-top: 120px;
+  &::after {
+    margin-top: 40px;
+  }
+}
+
+// .new-arrivals-list {
+// display: flex;
+// flex-direction: row;
+// flex-wrap: wrap;
+// margin-top: 81px;
+
+// & li {
+//   margin-right: 23px;
+// }
+// & li:nth-child(4n) {
+//   margin-right: 0px;
+// }
+// & li:nth-child(-n + 4) {
+//   margin-bottom: 40px;
+// }
+// }
+
+@media (max-width: 480px) {
+  .new-arrivals {
+    padding-bottom: 40px;
+    &-list {
+      margin-top: 40px;
+    }
+  }
+
+  .arrivals-title {
+    margin-top: 50px;
+  }
+
+  .new-arrivals-list li {
+    margin-left: auto;
+    margin-right: auto;
+
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
+  }
+}

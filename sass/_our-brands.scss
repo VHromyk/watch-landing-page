@@ -1,0 +1,30 @@
+/* Стили для секции our brands */
+
+.our-brands {
+  text-align: center;
+  background-color: #0f0f0f;
+  &-title {
+    padding-top: 60px;
+  }
+  &-title::after {
+    margin-top: 40px;
+  }
+  &-list {
+    // display: flex;
+    padding-bottom: 80px;
+  }
+  // &-list li:not(:last-child) {
+  // margin-right: 30px;
+  // }
+}
+
+@media (max-width: 480px) {
+  .our-brands-title {
+    padding-top: 50px;
+  }
+  .our-brands-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

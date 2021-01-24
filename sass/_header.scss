@@ -1,0 +1,147 @@
+/* Стили для секции header */
+.header-wrapper {
+  color: $secondary-text-color;
+}
+
+.nav-list {
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 44px;
+
+  &-adress {
+    display: flex;
+  }
+
+  &-item {
+    line-height: 1.3;
+    color: var(--secondary-text-color);
+  }
+}
+
+.icon-phone {
+  width: 16px;
+  height: 16px;
+  margin-right: 15px;
+}
+
+.icon-login {
+  width: 14px;
+  height: 14px;
+  margin-right: 15px;
+}
+
+.line {
+  color: var(--secondary-text-color);
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.nav-btn {
+  padding: 0;
+  border: none;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  line-height: 1.3;
+}
+
+.nav-opt {
+  display: flex;
+  &-wraper {
+    background-color: #0f0f0f;
+  }
+  &-list {
+    display: flex;
+    margin-left: 469px;
+  }
+  &-logo {
+    font-family: PostBold;
+    font-size: 36px;
+    line-height: 1.5;
+    padding-top: 13px;
+    padding-bottom: 13px;
+  }
+}
+
+.nav-opt-list-link {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 1.28;
+  display: block;
+  color: $secondary-text-color;
+  padding-top: 31px;
+  padding-bottom: 31px;
+  padding-left: 20px;
+  padding-right: 20px;
+  white-space: nowrap;
+
+  &:hover,
+  &:focus {
+    background-color: #1f1f1f;
+    color: #ffffff;
+    transition: 0.4s;
+  }
+}
+
+.icon-svg {
+  width: 22px;
+  height: 22px;
+  margin-top: 29px;
+  margin-bottom: 29px;
+  cursor: pointer;
+}
+
+.cart {
+  margin-left: 30px;
+}
+
+.search {
+  margin-left: 30px;
+}
+
+@media (max-width: 480px) {
+  .nav-list-item-part {
+    display: none;
+  }
+  .nav-opt {
+    position: relative;
+  }
+  .nav-opt-list {
+    display: none;
+  }
+  .svg-icon-list {
+    display: none;
+  }
+  .menu-button {
+    position: absolute;
+    top: 70px;
+    right: 30px;
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+
+    .icon-cross {
+      fill: #ffffff;
+    }
+    .icon-menu {
+      fill: #ffffff;
+    }
+  }
+}
+
+.menu-button .icon-cross {
+  display: none;
+}
+
+.menu-button.is-open .icon-cross {
+  display: block;
+}
+
+.menu-button.is-open .icon-menu {
+  display: none;
+}

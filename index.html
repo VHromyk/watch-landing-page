@@ -9,41 +9,51 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/styles.css">
     
 </head>
 <body>
-    <header class="container">
-        <div class="nav-list">
-                <svg class="icon-phone">
-                    <use href="./image/symbol-defs.svg#icon-phone"></use>
-                </svg>
-            <p class="nav-list-item">8 (812) 123-45-67 | Работаем 7 дней в неделю | 9:00 — 18:00</p>
-            <svg class="icon-login">
-                <use href="./image/symbol-defs.svg#icon-login"></use>
-            </svg>
-            <button class="nav-btn">Войти</button>
-            <span class="line">/</span>
-            <button class="nav-btn">Регистрация</button>
-
+    <header>
+        <div class="header-wrapper">
+            <div class="nav-list container-box">
+                <div class="nav-list-adress">
+                    <svg class="icon-phone">
+                        <use href="./image/symbol-defs.svg#icon-phone"></use>
+                    </svg>
+                    <p class="nav-list-item">8 (812) 123-45-67 | Работаем 7 дней в неделю | 9:00 — 18:00</p>
+                </div>
+                <div class="nav-list-registration">
+                    <svg class="icon-login">
+                        <use href="./image/symbol-defs.svg#icon-login"></use>
+                    </svg>
+                    <button class="nav-btn">Войти</button>
+                    <span class="line">/</span>
+                    <button class="nav-btn">Регистрация</button>
+                </div>
+            </div>
         </div>
-        <div class="nav-opt">
-            <p class="nav-opt-logo">PORTEN</p>
-            <ul class="nav-opt-list">
-                <li class="nav-opt-list-item"><a href="#" class= "nav-opt-list-link">Понравилось</a></li>
-                <li><a href="#" class= "nav-opt-list-link">Личный кабинет</a></li>
-                <li><a href="#" class= "nav-opt-list-link">Настройки</a></li>
-            </ul>
-    <svg class="icon-svg cart">
+        <div class="nav-opt-wraper">
+            <div class="nav-opt container-box">
+                <p class="nav-opt-logo">PORTEN</p>
+                <ul class="nav-opt-list">
+                    <li class="nav-opt-list-item"><a href="#" class="nav-opt-list-link">Понравилось</a></li>
+                    <li><a href="#" class="nav-opt-list-link">Личный кабинет</a></li>
+                    <li><a href="#" class="nav-opt-list-link">Настройки</a></li>
+                </ul>
+                <svg class="icon-svg cart">
         <use href="./image/symbol-defs.svg#icon-cart"></use>
     </svg>
     <svg class="icon-svg search">
         <use href="./image/symbol-defs.svg#icon-search"></use>
     </svg>
+</div>
         </div>
+       
     </header>
     <main>
-        <section class="hero container">
+        <section class="hero">
+            <div class="hero-wrap container-box"> 
             <div class="hero-logo-wrapper">
                 <h1 class="hero-logo">PORTEN</h1>
                 <p class="hero-logo-city">Санкт-Петербург</p>
@@ -51,8 +61,9 @@
             <p class="hero-logo-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus interdum purus, est tortor pulvinar ut in. Fringilla a
             diam enim sed justo, sed iaculis sagittis. Tortor id eu interdum nec ut iaculis. Penatibus ullamcorper ultricies morbi
             ipsum sem metus pharetra, mi. Tortor nibh magna feugiat id nunc, dui nisl viverra.</p>
+            </div>
         </section>
-        <section class="new-collection container">
+        <section class="new-collection">
             <div class="watch-wrapper">
                 <h2 class="watch-sezon title">сезон 2020/21</h2>
                 <ul class="watch-list">
@@ -107,7 +118,7 @@
                 <button class="old-collection-btn">Посмотреть коллекцию</button>
             </div>
         </section>
-        <section class="new-arrivals container">
+        <section class="new-arrivals container-box">
             <h2 class=" arrivals-title title">
                 Новые поступления
             </h2>
@@ -186,7 +197,8 @@
                 </li>
             </ul>
         </section>
-        <section class="our-brands container">
+        <section class="our-brands">
+            <div class="container-box">
             <h2 class="our-brands-title title">Наши бренды</h2>
             <ul class="our-brands-list">
                 <li>
@@ -202,17 +214,22 @@
                     <img class="our-brands-item-img-4" src="./image/our-brand.png" alt="brand" width="255px">
                 </li>
         </ul>
-
+        </div>
         </section>
     </main>
-    <footer class="container">
+    <footer>
+        <div class="footer-background">
+<div class="footer-wrapper container-box">
     <div class="footer-wrap">
         <div class="about-shop">
             <h3 class="footer-title">О магазине</h3>
             <p class="about-shop-description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi semper viverra nunc cursus tortor lectus nunc nulla nibh.
-                Egestas amet consectetur vel vitae aliquam dictum suspendisse. Lobortis eget consequat, tellus et et sed turpis. Pretium
-                quisque vitae, amet, porttitor odio ultricies massa pharetra leo. Et ipsum urna fames in sit mi ultrices nisi, nunc.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi semper viverra nunc cursus tortor lectus
+                nunc nulla nibh.
+                Egestas amet consectetur vel vitae aliquam dictum suspendisse. Lobortis eget consequat, tellus et et sed
+                turpis. Pretium
+                quisque vitae, amet, porttitor odio ultricies massa pharetra leo. Et ipsum urna fames in sit mi ultrices
+                nisi, nunc.
             </p>
         </div>
         <div class="category">
@@ -227,11 +244,15 @@
         </div>
         <div class="mailing">
             <h3 class="footer-title">Рассылка</h3>
-            <p class="mailing-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi semper viverra nunc cursus tortor lectus nunc nulla nibh.</p>
+            <p class="mailing-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi semper viverra
+                nunc cursus tortor lectus nunc nulla nibh.</p>
             <input type="text" placeholder="Ваша почта" class="mailing-input">
             <button class="mailing-btn" type="button">Подписаться</button>
         </div>
+    </div>
+</div>
         </div>
+        
         <div class="underfooter">
             <div class="undefooter-wrap container-box">
                 <p class="underfooter-security">© 2020 Все права защищены</p>
@@ -239,6 +260,5 @@
             </div>
         </div>
     </footer>
-    
 </body>
 </html>

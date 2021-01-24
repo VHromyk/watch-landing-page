@@ -418,6 +418,25 @@ body.modal-open {
   margin-left: auto;
 }
 
+.title {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.33;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.title::after {
+  content: "";
+  width: 120px;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  height: 1px;
+  background: #ffffff;
+}
+
 .nav-list {
   background-color: #000000;
   color: grey;
@@ -505,9 +524,11 @@ body.modal-open {
   padding-right: 20px;
 }
 
-.nav-opt-list-link:hover {
+.nav-opt-list-link:hover,
+.nav-opt-list-link:focus {
   background-color: #1f1f1f;
   color: #ffffff;
+  transition: 0.4s;
 }
 
 .icon-svg {
@@ -595,23 +616,8 @@ body.modal-open {
   text-align: center;
 }
 
-.watch-sezon-title {
-  font-family: "Playfair Display", serif;
-  font-size: 36px;
-  line-height: 1.33;
-  color: #ffffff;
-  text-transform: uppercase;
-}
-
-.watch-sezon-title::after {
-  content: "";
-  width: 120px;
+.watch-sezon::after {
   margin-top: 50px;
-  margin-right: auto;
-  margin-left: auto;
-  display: block;
-  height: 1px;
-  background: #ffffff;
 }
 
 .watch-list {
@@ -656,7 +662,7 @@ body.modal-open {
   color: #d0d0d0;
 }
 
-.new-collection-wrapper {
+.new-collection-catalog-wrapper {
   background-image: url(../image/new-collection.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -665,31 +671,16 @@ body.modal-open {
   text-align: center;
 }
 
-.new-collection-title {
-  font-family: "Playfair Display", serif;
-  font-size: 36px;
-  line-height: 1.33;
-  font-weight: 700;
-  text-transform: uppercase;
-  padding-left: 252px;
-  padding-right: 252px;
-
+.new-collection-catalog {
   margin-top: 484px;
-  color: #ffffff;
+  font-weight: 400;
 }
 
-.new-collection-title::after {
-  content: "";
-  width: 120px;
-  margin-right: auto;
-  margin-left: auto;
-  display: block;
+.new-collection-catalog::after {
   margin-top: 30px;
-  height: 1px;
-  background: #ffffff;
 }
 
-.new-collection-btn {
+.new-collection-catalog-btn {
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   text-transform: uppercase;
@@ -709,53 +700,30 @@ body.modal-open {
 
 .image-wrapper {
   position: relative;
-  background-image: url(../image/man.jpg);
+  background-image: linear-gradient(
+      rgba(15, 15, 15, 0.5),
+      rgba(15, 15, 15, 0.5)
+    ),
+    url(../image/man.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   width: 880px;
   height: 600px;
 }
 
-.image-wrapper::after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-image: linear-gradient(
-    rgba(15, 15, 15, 0.5),
-    rgba(15, 15, 15, 0.5)
-  );
-}
-
 .old-collection-wrapper {
   width: 1040px;
   background-color: #000000;
   text-align: center;
+  justify-content: flex-end;
 }
 
-.old-collection-title {
-  font-family: "Playfair Display", serif;
-  font-size: 36px;
-  font-weight: 400;
-  line-height: 1.33;
-  text-transform: uppercase;
-
+.old-collection-catalog {
   padding-top: 100px;
-  color: #ffffff;
 }
 
-.old-collection-title::after {
-  content: "";
-  width: 120px;
-  margin-right: auto;
-  margin-left: auto;
-  display: block;
+.old-collection-catalog::after {
   margin-top: 40px;
-  height: 1px;
-  background: #ffffff;
 }
 
 .old-collection-description {
@@ -783,6 +751,12 @@ body.modal-open {
   line-height: 1.3;
 }
 
+.old-collection-btn:hover,
+.old-collection-btn:focus {
+  background-color: #1f1f1f;
+  transition: 0.4s;
+}
+
 .new-arrivals {
   background-color: #000000;
   text-align: center;
@@ -794,14 +768,7 @@ body.modal-open {
 }
 
 .arrivals-title::after {
-  content: "";
-  width: 120px;
-  margin-right: auto;
-  margin-left: auto;
-  display: block;
   margin-top: 40px;
-  height: 1px;
-  background: #ffffff;
 }
 
 .new-arrivals-list {
@@ -823,4 +790,175 @@ body.modal-open {
 
 .new-arrivals-list li:nth-child(-n + 4) {
   margin-bottom: 40px;
+}
+
+.our-brands {
+  background-color: #0f0f0f;
+  text-align: center;
+}
+
+.our-brands-title {
+  padding-top: 60px;
+}
+
+.our-brands-title::after {
+  margin-top: 40px;
+}
+.our-brands-list {
+  display: flex;
+  margin-left: 405px;
+  padding-bottom: 80px;
+}
+.our-brands-list li:not(:last-child) {
+  margin-right: 30px;
+}
+
+.footer-wrap {
+  background-color: #c4c4c4;
+  background-image: linear-gradient(
+      rgba(15, 15, 15, 0.85),
+      rgba(15, 15, 15, 0.85)
+    ),
+    url(../image/man-for-fone.jpg);
+  min-height: 400px;
+  position: relative;
+  display: flex;
+}
+
+.footer-wrap div {
+  padding-top: 80px;
+}
+
+.about-shop {
+  margin-left: 405px;
+  max-width: 350px;
+}
+
+.footer-title {
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.33;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.about-shop-description {
+  font-family: "PT Sans", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #ffffff;
+}
+
+.category {
+  margin-left: 31px;
+  max-width: 300px;
+}
+
+.category-list-item {
+  display: flex;
+  flex-wrap: wrap;
+}
+.category-list-item li:nth-last-child(-n + 2) {
+  margin-top: 20px;
+}
+.category-list-item li {
+  margin-left: 20px;
+}
+.category-list-item li:nth-child(1) {
+  margin-left: 0px;
+}
+.category-list-item li:nth-child(4) {
+  margin-left: 0px;
+}
+
+.category-list-link {
+  display: block;
+  padding: 10px 20px;
+  font-family: "PT Sans", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  text-transform: lowercase;
+  background-color: #000000;
+  color: #d0d0d0;
+}
+
+.category-list-link:hover,
+.category-list-link:focus {
+  background-color: #1f1f1f;
+  transition: 0.4s;
+}
+
+.mailing {
+  max-width: 360px;
+  margin-left: 90px;
+}
+
+.mailing-description {
+  font-family: "PT Sans", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 38px;
+  color: #ffffff;
+}
+
+.mailing-input {
+  width: 210px;
+  height: 42px;
+  padding: 6px 12px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: none;
+}
+
+.mailing-input::placeholder {
+  color: #ffffff;
+  font-family: "PT Sans", sans-serif;
+  font-size: 14px;
+}
+
+.mailing-btn {
+  width: 140px;
+  height: 42px;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  background-color: #0f0f0f;
+  color: #ffffff;
+  font-family: "PT Sans", sans-serif;
+  text-transform: uppercase;
+  border: none;
+}
+
+.mailing-btn:hover,
+.mailing-btn:focus {
+  background-color: #1f1f1f;
+  transition: 0.4s;
+}
+
+.underfooter {
+  background-color: #0f0f0f;
+}
+
+.container-box {
+  width: 1150px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.undefooter-wrap {
+  display: flex;
+  justify-content: space-between;
+  font-family: "PT Sans", sans-serif;
+  font-size: 12px;
+  line-height: 1.33;
+  color: #d0d0d0;
+  padding-top: 17px;
+  padding-bottom: 17px;
+}
+
+.underfooter-work {
+  text-decoration: underline;
 }

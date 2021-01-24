@@ -6,8 +6,8 @@
     <title>Watch</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Playfair+Display:wght@700&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="./css/styles.css">
     
@@ -54,7 +54,7 @@
         </section>
         <section class="new-collection container">
             <div class="watch-wrapper">
-                <h2 class="watch-sezon-title">сезон 2020/21</h2>
+                <h2 class="watch-sezon title">сезон 2020/21</h2>
                 <ul class="watch-list">
                     <li class="watch-list-item">
                         <div class="watch-list-item-wrapper">
@@ -85,16 +85,18 @@
                         </li>
                 </ul>
             </div>
-            <div class="new-collection-wrapper">
-                <h2 class="new-collection-title">Новая коллекция</h2>
-                <button class="new-collection-btn">Каталог</button>
+            <div class="new-collection-catalog-wrapper">
+                <h2 class="new-collection-catalog title">Новая коллекция</h2>
+                <button class="new-collection-catalog-btn">Каталог</button>
             </div>
         </section>
         <section class="old-collection container">
-            <div class="image-wrapper">
+            <div 
+            class="image-wrapper">
             </div>
-            <div class="old-collection-wrapper">
-                <h2 class="old-collection-title">
+            <div 
+            class="old-collection-wrapper">
+                <h2 class="old-collection-catalog title">
                     Коллекция 2018
                 </h2>
                 <p class="old-collection-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non rutrum ornare ut mattis habitant dui arcu. Sagittis amet
@@ -106,7 +108,7 @@
             </div>
         </section>
         <section class="new-arrivals container">
-            <h2 class="old-collection-title arrivals-title">
+            <h2 class=" arrivals-title title">
                 Новые поступления
             </h2>
             <ul class="new-arrivals-list">
@@ -183,14 +185,59 @@
                     <p class="watch-list-item-price">165 000 руб.</p>
                 </li>
             </ul>
-            
-
+        </section>
+        <section class="our-brands container">
+            <h2 class="our-brands-title title">Наши бренды</h2>
+            <ul class="our-brands-list">
+                <li>
+                    <img class="our-brands-item-img-1" src="./image/our-brand.png" alt="brand" width="255px">
+                </li>
+                <li>
+                    <img class="our-brands-item-img-2" src="./image/our-brand.png" alt="brand" width="255px">
+                </li>
+                <li>
+                    <img class="our-brands-item-img-3" src="./image/our-brand.png" alt="brand" width="255px">
+                </li>
+                <li>
+                    <img class="our-brands-item-img-4" src="./image/our-brand.png" alt="brand" width="255px">
+                </li>
+        </ul>
 
         </section>
-
     </main>
-    <footer>
-
+    <footer class="container">
+    <div class="footer-wrap">
+        <div class="about-shop">
+            <h3 class="footer-title">О магазине</h3>
+            <p class="about-shop-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi semper viverra nunc cursus tortor lectus nunc nulla nibh.
+                Egestas amet consectetur vel vitae aliquam dictum suspendisse. Lobortis eget consequat, tellus et et sed turpis. Pretium
+                quisque vitae, amet, porttitor odio ultricies massa pharetra leo. Et ipsum urna fames in sit mi ultrices nisi, nunc.
+            </p>
+        </div>
+        <div class="category">
+            <h3 class="footer-title">Категории</h3>
+            <ul class="category-list-item">
+                <li> <a href="#" class="category-list-link">Часы</a></li>
+                <li> <a href="#" class="category-list-link">Браслеты</a></li>
+                <li> <a href="#" class="category-list-link">Ремни</a></li>
+                <li> <a href="#" class="category-list-link">Ювелирные изделия</a></li>
+                <li> <a href="#" class="category-list-link">Запонки</a></li>
+            </ul>
+        </div>
+        <div class="mailing">
+            <h3 class="footer-title">Рассылка</h3>
+            <p class="mailing-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi semper viverra nunc cursus tortor lectus nunc nulla nibh.</p>
+            <input type="text" placeholder="Ваша почта" class="mailing-input">
+            <button class="mailing-btn" type="button">Подписаться</button>
+        </div>
+        </div>
+        <div class="underfooter">
+            <div class="undefooter-wrap container-box">
+                <p class="underfooter-security">© 2020 Все права защищены</p>
+                <p class="underfooter-work">Сделано Figma.info</p>
+            </div>
+        </div>
     </footer>
     
 </body>

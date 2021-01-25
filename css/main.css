@@ -471,6 +471,7 @@ button {
   justify-content: space-between;
   align-items: center;
   height: 44px;
+  z-index: 100;
 }
 
 .nav-list-adress {
@@ -480,12 +481,18 @@ button {
 .nav-list-item {
   line-height: 1.3;
   color: var(--secondary-text-color);
+  z-index: 300;
+}
+
+.nav-list-registration {
+  z-index: 300;
 }
 
 .icon-phone {
   width: 16px;
   height: 16px;
   margin-right: 15px;
+  z-index: 300;
 }
 
 .icon-login {
@@ -511,15 +518,11 @@ button {
 
 .nav-opt {
   display: flex;
+  z-index: 200;
 }
 
 .nav-opt-wraper {
   background-color: #0f0f0f;
-}
-
-.nav-opt-list {
-  display: flex;
-  margin-left: 469px;
 }
 
 .nav-opt-logo {
@@ -528,17 +531,15 @@ button {
   line-height: 1.5;
   padding-top: 13px;
   padding-bottom: 13px;
+  z-index: 200;
 }
 
 .nav-opt-list-link {
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 14px;
   line-height: 1.28;
   display: block;
   color: #969696;
-  padding-top: 31px;
-  padding-bottom: 31px;
   padding-left: 20px;
   padding-right: 20px;
   white-space: nowrap;
@@ -553,60 +554,117 @@ button {
 .icon-svg {
   width: 22px;
   height: 22px;
-  margin-top: 29px;
-  margin-bottom: 29px;
   cursor: pointer;
 }
 
-.cart {
-  margin-left: 30px;
-}
-
-.search {
-  margin-left: 30px;
-}
-
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .nav-list-item-part {
     display: none;
   }
   .nav-opt {
     position: relative;
   }
-  .nav-opt-list {
-    display: none;
-  }
-  .svg-icon-list {
-    display: none;
-  }
   .menu-button {
+    font-size: 25px;
     position: absolute;
-    top: 70px;
+    top: 20px;
     right: 30px;
     display: inline-flex;
     margin: 0;
     padding: 0;
     border: none;
     background-color: transparent;
+    z-index: 200;
   }
   .menu-button .icon-cross {
     fill: #ffffff;
+    display: none;
+  }
+  .menu-button.is-open .icon-cross {
+    display: block;
+  }
+  .menu-button.is-open .icon-menu {
+    display: none;
   }
   .menu-button .icon-menu {
     fill: #ffffff;
   }
+  .svg-icon-list {
+    display: flex;
+    justify-content: center;
+  }
+  .svg-icon-list-link {
+    font-size: 30px;
+  }
+  .svg-icon-list li {
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-top: 50px;
+    padding: 10px;
+  }
+  .svg-icon-list li:not(:last-child) {
+    margin-right: 50px;
+  }
+  .nav-opt-list li:not(:first-child) {
+    padding-top: 30px;
+  }
+  .menu-container {
+    padding: 80px;
+    text-align: center;
+    font-size: 20px;
+    position: absolute;
+    width: 100%;
+    top: 80px;
+    left: 0;
+    transform: translateY(-100%);
+    height: 550px;
+    z-index: -50;
+  }
+  .menu-container.is-open {
+    display: block;
+    background-color: #0d0e0e;
+    transition-property: background-color;
+    transform: translateY(0%);
+    transition-property: transform;
+    transition-duration: 400ms;
+    transition-timing-function: cubic-bezier(0.58, 0.21, 0.83, 0.67);
+    transition-delay: 400ms;
+    z-index: 50;
+  }
 }
 
-.menu-button .icon-cross {
-  display: none;
+@media (min-width: 768px) {
+  .menu-button {
+    display: none;
+  }
+  .nav-opt {
+    display: flex;
+    justify-content: space-between;
+  }
+  .menu-container {
+    display: flex;
+  }
+  .nav-opt-list {
+    display: flex;
+    align-items: center;
+  }
+  .nav-opt-list li a {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .svg-icon-list {
+    display: flex;
+    align-items: center;
+  }
+  .svg-icon-list li {
+    margin-left: 20px;
+  }
 }
 
-.menu-button.is-open .icon-cross {
-  display: block;
-}
-
-.menu-button.is-open .icon-menu {
-  display: none;
+@media (min-width: 1200px) {
+  .menu-container {
+    margin-left: 470px;
+  }
 }
 
 /* Стили для секции hero */
@@ -671,6 +729,8 @@ button {
 
 .watch-list {
   margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .watch-list-item {
@@ -734,10 +794,16 @@ button {
   margin-top: 30px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .watch-wrapper {
     width: 100%;
     padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .watch-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding-bottom: 50px;
   }
   .watch-list-item {
@@ -755,6 +821,62 @@ button {
   }
   .new-collection-catalog-btn {
     margin-bottom: 150px;
+  }
+}
+
+@media (min-width: 768px) {
+  .watch-sezon {
+    padding-top: 50px;
+  }
+  .new-collection-catalog-wrapper {
+    height: 700px;
+    width: 100%;
+  }
+  .watch-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+  }
+  .watch-list li:not(:last-child) {
+    margin-bottom: 50px;
+  }
+  .new-collection-catalog {
+    padding-top: 300px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .watch-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .watch-list li:not(:last-child) {
+    margin-right: 30px;
+    margin-bottom: 0px;
+  }
+  .watch-wrapper {
+    width: 1150px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .new-collection-catalog-wrapper {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1920px) {
+  .new-collection {
+    display: flex;
+  }
+  .watch-wrapper {
+    width: 54.2%;
+  }
+  .new-collection-catalog-wrapper {
+    width: 45.8%;
   }
 }
 
@@ -808,7 +930,7 @@ button {
   height: 600px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .image-wrapper {
     display: none;
   }
@@ -823,6 +945,35 @@ button {
   }
 }
 
+@media (min-width: 768px) {
+  .image-wrapper {
+    width: 100%;
+  }
+  .old-collection-wrapper {
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .new-arrivals-list {
+    padding-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .new-arrivals-list li:nth-child(2n + 1) {
+    margin-right: 30px;
+  }
+  .new-arrivals-list li:not(:nth-child(-n + 2)) {
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .old-collection {
+    display: flex;
+  }
+}
+
 /* Стили для секции new arrivals */
 .new-arrivals {
   text-align: center;
@@ -833,7 +984,7 @@ button {
   margin-top: 40px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .new-arrivals {
     padding-bottom: 40px;
   }
@@ -849,6 +1000,18 @@ button {
   }
   .new-arrivals-list li:not(:last-child) {
     margin-bottom: 50px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .new-arrivals-list li:not(:nth-child(4n)) {
+    margin-right: 20px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .arrivals-title {
+    padding-top: 120px;
   }
 }
 
@@ -870,7 +1033,7 @@ button {
   padding-bottom: 80px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1200px) {
   .our-brands-title {
     padding-top: 50px;
   }
@@ -881,10 +1044,19 @@ button {
   }
 }
 
+@media (min-width: 1150px) {
+  .our-brands-list {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
 /* Стили для секции footer */
 .footer-background {
   background-color: #c4c4c4;
   background-image: linear-gradient(rgba(15, 15, 15, 0.85), rgba(15, 15, 15, 0.85)), url(../image/man-for-fone.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   min-height: 400px;
   position: relative;
 }
@@ -996,12 +1168,7 @@ button {
   transition: 0.4s;
 }
 
-.underfooter {
-  background-color: #0f0f0f;
-}
-
 .underfooter-wrap {
-  justify-content: space-between;
   font-size: 12px;
   line-height: 1.33;
   padding-top: 17px;
@@ -1012,7 +1179,7 @@ button {
   text-decoration: underline;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .footer-wrap {
     text-align: center;
   }
@@ -1053,6 +1220,46 @@ button {
   .mailing-form button {
     margin-top: 20px;
     border-radius: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer-wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+  .about-shop {
+    max-width: 300px;
+  }
+  .category {
+    display: none;
+  }
+  .footer-wrap div {
+    padding-top: 50px;
+  }
+  .underfooter {
+    padding-bottom: 20px;
+    padding-top: 20px;
+    text-align: center;
+  }
+  .underfooter-wrap {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+@media (min-width: 1150px) {
+  .category {
+    display: block;
+  }
+  .underfooter-wrap {
+    display: flex;
+  }
+}
+
+@media (min-width: 1920px) {
+  .underfooter {
+    padding: 0px;
   }
 }
 /*# sourceMappingURL=main.css.map */

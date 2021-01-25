@@ -35,6 +35,7 @@
         <div class="nav-opt-wraper">
             <div class="nav-opt container-box">
                 <p class="nav-opt-logo">PORTEN</p>
+                <div class="menu-container" data-menu>
                 <ul class="nav-opt-list">
                     <li class="nav-opt-list-item"><a href="#" class="nav-opt-list-link">Понравилось</a></li>
                     <li><a href="#" class="nav-opt-list-link">Личный кабинет</a></li>
@@ -51,21 +52,16 @@
                         <use href="./image/sprite.svg#icon-search"></use>
                     </svg>
                 </li>
-            </ul>         
+            </ul>
+            </div>
+            <button type="button" class="menu-button" data-menu-button>
+                <svg width="30" height="30px" aria-label="Переключатель мобильного меню">
+                    <use class="icon-menu" href="./image/sprite.svg#burger"></use>
+                    <use class="icon-cross" href="./image/sprite.svg#cross"></use>
+                </svg>
+            </button>
         </div>
-        <button 
-        type="button" 
-        class="menu-button is-open">
-            <svg 
-            width="30" 
-            height="30px"
-            aria-label="Переключатель мобильного меню">
-                <use class="icon-menu" href="./image/sprite.svg#burger"></use>
-                <use class="icon-cross" href="./image/sprite.svg#cross"></use>
-            </svg>
-        </button>
         </div>
-       
     </header>
     <main>
         <section class="hero">
@@ -273,7 +269,7 @@
         </div>
         
         <div class="underfooter">
-            <div class="undefooter-wrap container-box">
+            <div class="underfooter-wrap container-box">
                 <p class="underfooter-security">© 2020 Все права защищены</p>
                 <p class="underfooter-work">Сделано Figma.info</p>
             </div>

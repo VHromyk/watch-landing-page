@@ -7,9 +7,9 @@
     width: 54.2%;
     text-align: center;
   }
-  &-catalog {
-    // padding-top: 100px;
-  }
+  // &-catalog {
+  // padding-top: 100px;
+  // }
   &-catalog::after {
     margin-top: 40px;
   }
@@ -57,7 +57,7 @@
   height: 600px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .image-wrapper {
     display: none;
   }
@@ -69,5 +69,37 @@
   }
   .old-collection-catalog {
     padding-top: 50px;
+  }
+}
+
+@media (min-width: 768px) {
+  .image-wrapper {
+    width: 100%;
+  }
+
+  .old-collection-wrapper {
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .new-arrivals-list {
+    padding-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    & li:nth-child(2n + 1) {
+      margin-right: 30px;
+    }
+    & li:not(:nth-child(-n + 2)) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media (min-width: 1920px) {
+  .old-collection {
+    display: flex;
   }
 }

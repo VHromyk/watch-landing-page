@@ -6,30 +6,12 @@
 }
 
 .arrivals-title {
-  // padding-top: 120px;
   &::after {
     margin-top: 40px;
   }
 }
 
-// .new-arrivals-list {
-// display: flex;
-// flex-direction: row;
-// flex-wrap: wrap;
-// margin-top: 81px;
-
-// & li {
-//   margin-right: 23px;
-// }
-// & li:nth-child(4n) {
-//   margin-right: 0px;
-// }
-// & li:nth-child(-n + 4) {
-//   margin-bottom: 40px;
-// }
-// }
-
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .new-arrivals {
     padding-bottom: 40px;
     &-list {
@@ -48,5 +30,16 @@
     &:not(:last-child) {
       margin-bottom: 50px;
     }
+  }
+}
+
+@media (min-width: 1150px) {
+  .new-arrivals-list li:not(:nth-child(4n)) {
+    margin-right: 20px;
+  }
+}
+@media (min-width: 1920px) {
+  .arrivals-title {
+    padding-top: 120px;
   }
 }

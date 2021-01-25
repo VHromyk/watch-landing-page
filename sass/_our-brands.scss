@@ -13,12 +13,9 @@
     // display: flex;
     padding-bottom: 80px;
   }
-  // &-list li:not(:last-child) {
-  // margin-right: 30px;
-  // }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1200px) {
   .our-brands-title {
     padding-top: 50px;
   }
@@ -26,5 +23,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+}
+
+@media (min-width: 1150px) {
+  .our-brands-list {
+    display: flex;
+    flex-direction: row;
   }
 }

@@ -7,12 +7,14 @@
       rgba(15, 15, 15, 0.85)
     ),
     url(../image/man-for-fone.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
   min-height: 400px;
   position: relative;
 }
 
 .footer-wrap {
-  // display: flex;
   & div {
     padding-top: 80px;
   }
@@ -35,7 +37,6 @@
 }
 
 .category {
-  // margin-left: 30px;
   max-width: 300px;
 }
 
@@ -74,7 +75,6 @@
 
 .mailing {
   max-width: 360px;
-  // margin-left: 60px;
   &-description {
     font-family: "PT Sans", sans-serif;
     font-size: 14px;
@@ -114,22 +114,18 @@
   }
 }
 
-.underfooter {
-  background-color: #0f0f0f;
-  &-wrap {
-    // display: flex;
-    justify-content: space-between;
-    font-size: 12px;
-    line-height: 1.33;
-    padding-top: 17px;
-    padding-bottom: 17px;
-  }
-  &-work {
-    text-decoration: underline;
-  }
+.underfooter-wrap {
+  font-size: 12px;
+  line-height: 1.33;
+  padding-top: 17px;
+  padding-bottom: 17px;
 }
 
-@media (max-width: 480px) {
+.underfooter-work {
+  text-decoration: underline;
+}
+
+@media (max-width: 767px) {
   .footer-wrap {
     text-align: center;
     & div {
@@ -170,5 +166,45 @@
   .mailing-form button {
     margin-top: 20px;
     border-radius: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer-wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+  .about-shop {
+    max-width: 300px;
+  }
+  .category {
+    display: none;
+  }
+  .footer-wrap div {
+    padding-top: 50px;
+  }
+  .underfooter {
+    padding-bottom: 20px;
+    padding-top: 20px;
+    text-align: center;
+    &-wrap {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+}
+
+@media (min-width: 1150px) {
+  .category {
+    display: block;
+  }
+  .underfooter-wrap {
+    display: flex;
+  }
+}
+
+@media (min-width: 1920px) {
+  .underfooter {
+    padding: 0px;
   }
 }

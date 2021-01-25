@@ -1,0 +1,105 @@
+/* Стили для секции old collection */
+
+.old-collection {
+  // display: flex;
+
+  &-wrapper {
+    width: 54.2%;
+    text-align: center;
+  }
+  // &-catalog {
+  // padding-top: 100px;
+  // }
+  &-catalog::after {
+    margin-top: 40px;
+  }
+  &-description {
+    margin-top: 40px;
+    line-height: 1.5;
+    margin-left: 285px;
+    margin-right: 284px;
+    max-width: 471px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  &-btn {
+    font-family: "PT Sans", sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 12px 28px;
+    margin-top: 61px;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    letter-spacing: 0.1em;
+    line-height: 1.28;
+    background-color: transparent;
+    cursor: pointer;
+    line-height: 1.3;
+  }
+  &-btn:hover,
+  &-btn:focus {
+    background-color: #1f1f1f;
+    border-color: rgb(1, 63, 19);
+    transition: 0.4s;
+  }
+}
+
+.image-wrapper {
+  position: relative;
+  background-image: linear-gradient(
+      rgba(15, 15, 15, 0.5),
+      rgba(15, 15, 15, 0.5)
+    ),
+    url(../image/man.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 45.8%;
+  height: 600px;
+}
+
+@media (max-width: 767px) {
+  .image-wrapper {
+    display: none;
+  }
+  .old-collection-wrapper {
+    width: 100%;
+  }
+  .old-collection-btn {
+    margin-bottom: 50px;
+  }
+  .old-collection-catalog {
+    padding-top: 50px;
+  }
+}
+
+@media (min-width: 768px) {
+  .image-wrapper {
+    width: 100%;
+  }
+
+  .old-collection-wrapper {
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .new-arrivals-list {
+    padding-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    & li:nth-child(2n + 1) {
+      margin-right: 30px;
+    }
+    & li:not(:nth-child(-n + 2)) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media (min-width: 1920px) {
+  .old-collection {
+    display: flex;
+  }
+}

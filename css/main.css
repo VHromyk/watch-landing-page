@@ -564,6 +564,19 @@ button {
   .nav-opt {
     position: relative;
   }
+  .nav-opt-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav-opt .nav-opt-list-link:hover,
+  .nav-opt .nav-opt-list-link:focus {
+    background-color: #000000;
+  }
+  .icon-svg {
+    width: 27px;
+    height: 22px;
+  }
   .menu-button {
     font-size: 25px;
     position: absolute;
@@ -972,6 +985,12 @@ button {
   .old-collection {
     display: flex;
   }
+  .image-wrapper {
+    width: 45.8%;
+  }
+  .old-collection-wrapper {
+    width: 54.2%;
+  }
 }
 
 /* Стили для секции new arrivals */
@@ -1057,6 +1076,7 @@ button {
   background-image: linear-gradient(rgba(15, 15, 15, 0.85), rgba(15, 15, 15, 0.85)), url(../image/man-for-fone.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   min-height: 400px;
   position: relative;
 }
@@ -1171,8 +1191,6 @@ button {
 .underfooter-wrap {
   font-size: 12px;
   line-height: 1.33;
-  padding-top: 17px;
-  padding-bottom: 17px;
 }
 
 .underfooter-work {
@@ -1199,6 +1217,7 @@ button {
     display: block;
   }
   .mailing-btn {
+    width: 210px;
     margin-bottom: 50px;
   }
   .footer-title {
@@ -1219,7 +1238,6 @@ button {
   }
   .mailing-form button {
     margin-top: 20px;
-    border-radius: 10px;
   }
 }
 
@@ -1238,13 +1256,13 @@ button {
     padding-top: 50px;
   }
   .underfooter {
-    padding-bottom: 20px;
-    padding-top: 20px;
+    padding-bottom: 5px;
+    padding-top: 5px;
     text-align: center;
   }
   .underfooter-wrap {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
   }
 }
 

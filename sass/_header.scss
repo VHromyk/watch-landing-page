@@ -100,6 +100,20 @@
   }
   .nav-opt {
     position: relative;
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .nav-opt-list-link:hover,
+    .nav-opt-list-link:focus {
+      background-color: #000000;
+    }
+  }
+  .icon-svg {
+    width: 27px;
+    height: 22px;
   }
   .menu-button {
     font-size: 25px;
@@ -211,7 +225,4 @@
   .menu-container {
     margin-left: 470px;
   }
-}
-
-@media (min-width: 1920px) {
 }

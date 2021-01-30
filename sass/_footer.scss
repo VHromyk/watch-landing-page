@@ -9,6 +9,7 @@
     url(../image/man-for-fone.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 
   min-height: 400px;
   position: relative;
@@ -117,8 +118,9 @@
 .underfooter-wrap {
   font-size: 12px;
   line-height: 1.33;
-  padding-top: 17px;
-  padding-bottom: 17px;
+
+  // padding-top: 17px;
+  // padding-bottom: 17px;
 }
 
 .underfooter-work {
@@ -144,6 +146,7 @@
       display: block;
     }
     &-btn {
+      width: 210px;
       margin-bottom: 50px;
     }
   }
@@ -165,7 +168,6 @@
   }
   .mailing-form button {
     margin-top: 20px;
-    border-radius: 10px;
   }
 }
 
@@ -184,12 +186,12 @@
     padding-top: 50px;
   }
   .underfooter {
-    padding-bottom: 20px;
-    padding-top: 20px;
+    padding-bottom: 5px;
+    padding-top: 5px;
     text-align: center;
     &-wrap {
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
     }
   }
 }
